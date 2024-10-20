@@ -1,0 +1,28 @@
+Pantalla 1: JUGAR
+Pantalla 2: Bahía de Tokio
+Pantalla 3: el lugar de encuentro para la cumbre de Tokio. aumento de personal de seguiridad (Opción 1) o no (Opción 2)?
+Pantalla 4: si  se aumento el personal 
+Pantalla 5: personal de seguridad muertos se determina por fallas del sistema. Se cancela (Opción 2) o se realiza la cumbre (Opción 2)
+Pantalla 6: El 21 de mayo hay un nuevo ataque terrorista
+Pantalla 7: Conan reactiva el caso, relacionando los dos incidentes
+Pantalla 8: Conan quiere reactivar la investigación del incidente. Ataque terrorista (Opción 1) o fallo tecnico (Opción 2)?
+Pantalla 9: Un incidente devastador se produce en forma de una explosión de gran escala, que sacude las bases del "Edge of Ocean", creando caos y una respuesta inmediata de emergencia. Ataque terrorista (Opción 1) o fallo tecnico (Opción 2)?
+Pantalla 10: Se presenta evidencia que todo fue por un atentado terrorista  por medio del ciber ataque.Se presenta evidencia que todo fue por un atentado terrorista  por medio del ciber ataque.
+Pantalla 11: la explosión afecta gravemente la infraestructura del establecimiento, resultando en daños significativos y la evacuación urgente de los asistentes, lo que interrumpe el desarrollo de la cumbre.
+Pantalla 12: Se suspende la cumbre
+Pantalla 13: Cae la sonda especial sobre el piso de la policia
+Pantalla 14:   exhaustivas para analizar las causas de la explosión, involucrando a expertos en seguridad y explosivos para determinar si hubo fallos de seguridad o actos deliberados.
+Pantalla 15: Implementan medidas de contingencia, reubican sesiones, establecen líneas de comunicación y coordinan con agencias de seguridad. El joven detective descubre que el padre de su amiga está implicado en el atentado (Opción 1) o suspenden el evento e inician una investigación interna (Opción 2)
+Pantalla 16: La  fiscalía entra en acción y hace sentenciar con las pruebas
+Pantalla 17: durante todo el proceso pasan accidentes tecnológicos y una sonda espacial cae en una zona de la ciudad
+Pantalla 18: En ese momento se encuentran unas huellas digitales en la escena del crimen y coinciden con las huellas de Kogoro Mouri,
+Pantalla 19: Conan y Amuro inician la investigación alrededor del arresto de Kogoro.
+Pantalla 20: Conan y Amuro se dan cuenta que el culpable es el fiscal general
+Pantalla 21: Se percatan que un virus tecnológico altero el rumbo de la sonda
+Pantalla 22: Hay persecución de Conan al fiscal, ya que el fiscal tiene el código de la sonda
+Pantalla 23: Atrapan el fiscal y entrega el código. El código lo desactiva. Nazu (Opción 1) o Conan? (Opción 2)
+Pantalla 24: Lo intenta desactivar la Nazu
+Pantalla 25: Destruye la sonda en el espacio con un protocolo y se salva la ciudad
+Pantalla 26: Lo intenta desactivar Conan y sus amigos, ya que la nazu no puede ingresar
+Pantalla 27: conan utiliza un dron para acercase a la sonda por medio de una explosión desviada   al océano pacífico
+Pantalla 28: el fiscal es detenido  y  la sonda es recuperada 
