@@ -1,7 +1,7 @@
 // Alumno: Tomás Valentino Pianelli
 // Numero de legajo: 119110/7
 // Artista: Luis Sacilotto
-// Video de YouTube: https://youtu.be/uDbvkGyD1wY
+// Video de YouTube: https://youtu.be/Zd9jrOwW98c
 
 let img;
 let rotacion = 0; // Variable para almacenar el ángulo de rotación
