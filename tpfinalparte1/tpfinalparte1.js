@@ -1,7 +1,8 @@
 // TP#Final Parte 1 - Comisión 5, Leo Garay
 // Tomas Pianelli 119110/7 - Agustin Nieto 119101/6
 // El Ruiseñor de Emperador
-// Video: https://www.youtube.com/watch?v=jIQdhOPH9ec
+// Video: 
+
 let apuntador = 0;
 let pantalla = 0;
 let textos = [];
@@ -14,25 +15,7 @@ let botonRESET = "REINICIAR";
 let botonCONT = "CONTINUAR";
 let botonSOUND = "SONIDO";
 let sonido;
-
-let transiciones = {
-  1: 2,
-  2: 3,
-  3: 4,
-  5: 6,
-  6: 7,
-  7: 8,
-  9: 10,
-  10: 11,
-  11: 12,
-  13: 14,
-  15: 16,
-  17: 18,
-  18: 19,
-  19: 20,
-  14: 20,
-  16: 20
-};
+let transiciones = [];
 
 function preload() { 
   textosEC = loadStrings("data/textos.txt");
@@ -52,6 +35,12 @@ function setup() {
     let lineaArray = split(linea, "#");
     textos[lineaArray[0]] = lineaArray[1];
   }
+  for (let i = 1; i <= 19; i++) {
+    transiciones[i] = i + 1; 
+  }
+  transiciones[14] = 20;
+  transiciones[16] = 20;
+
   sonido.loop();
 }
 
@@ -59,14 +48,14 @@ function draw() {
   background(200);
   image(imagenes[pantalla], 0, 0, 640, 480);
 
-  //Mostrar textos
+  // Mostrar textos
   fill(255);
   textSize(30);
   textAlign(CENTER);
   textFont(parrafos);
   text(textos[pantalla], 30, 50, 580, 250);
 
-  //Pantalla inicial con botón "COMENZAR"
+  // Pantalla inicial
   if (pantalla === 0) {
     dibujobotonEMP();
     fill(255);
@@ -77,15 +66,15 @@ function draw() {
     textFont(parrafos);
     text("Tomas Pianelli 119110/7\nAgustin Nieto 119101/6", width/2, 120);
 
-  //Pantalla final con botón Reset
+  // Pantalla final
   } else if (pantalla === 20) {
     dibujobotonRESET();
 
-  //Pantallas de elección (4, 8, 12)
+  // Pantallas de elección
   } else if (pantalla === 4 || pantalla === 8 || pantalla === 12) {
     dibujoboton();
 
-  //Resto de pantallas continuar
+  // Resto
   } else {
     dibujobotonCONT();
   }
@@ -94,12 +83,11 @@ function draw() {
 function dibujoboton() {
   textFont(parrafos);
   textSize(16);
-  textAlign(LEFT); // ✅ Alinear texto a la izquierda
+  textAlign(LEFT);
 
   let textoSI = "";
   let textoNO = "";
 
-  // Personalización según pantalla
   if (pantalla === 4) {
     textoSI = "Seguir escuchando al ruiseñor real";
     textoNO = "Fascinarse con el ruiseñor mecánico";
@@ -111,13 +99,13 @@ function dibujoboton() {
     textoNO = "Aceptar su muerte en paz,\nrecordando lo aprendido";
   }
 
-  // Botón izq
+  // Botón izquierdo
   fill(255);
   rect(90, height - 100, 200, 70, 10); 
   fill(0);
   text(textoSI, 105, height - 68, 180); 
 
-  // Botón der
+  // Botón derecho
   fill(255);
   rect(350, height - 100, 200, 70, 10);
   fill(0);
@@ -151,8 +139,10 @@ function dibujobotonEMP() {
   text(botonEMP, width/2, height - 45);
 }
 
+// 🔹 Función de avance de pantallas
 function avanzarPantalla() {
-  if (pantalla in transiciones) {
+  // si hay una siguiente pantalla
+  if (transiciones[pantalla]) {
     pantalla = transiciones[pantalla];
   }
 }
@@ -186,10 +176,14 @@ function mousePressed() {
     return;
   }
 
-  // Avanzar las pantallas
+  // Avanzar pantallas normales
   if (colisionBoton(width/2 - 50, height - 80, 100, 50)) {
     avanzarPantalla();
   }
+}
+
+function colisionBoton(x, y, w, h) {
+  return (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h);
 }
 
 function colisionBoton(x, y, w, h) {
