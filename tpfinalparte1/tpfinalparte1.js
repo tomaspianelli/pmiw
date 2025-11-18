@@ -1,9 +1,8 @@
 // TP#Final Parte 1 - Comisión 5, Leo Garay
 // Tomas Pianelli 119110/7 - Agustin Nieto 119101/6
 // El Ruiseñor de Emperador
-// Video: 
+// Video: https://youtu.be/Ol72iO1Eu54
 
-let apuntador = 0;
 let pantalla = 0;
 let textos = [];
 let imagenes = [];
@@ -48,14 +47,12 @@ function draw() {
   background(200);
   image(imagenes[pantalla], 0, 0, 640, 480);
 
-  // Mostrar textos
   fill(255);
   textSize(30);
   textAlign(CENTER);
   textFont(parrafos);
   text(textos[pantalla], 30, 50, 580, 250);
 
-  // Pantalla inicial
   if (pantalla === 0) {
     dibujobotonEMP();
     fill(255);
@@ -66,15 +63,12 @@ function draw() {
     textFont(parrafos);
     text("Tomas Pianelli 119110/7\nAgustin Nieto 119101/6", width/2, 120);
 
-  // Pantalla final
   } else if (pantalla === 20) {
     dibujobotonRESET();
 
-  // Pantallas de elección
   } else if (pantalla === 4 || pantalla === 8 || pantalla === 12) {
     dibujoboton();
 
-  // Resto
   } else {
     dibujobotonCONT();
   }
@@ -99,13 +93,11 @@ function dibujoboton() {
     textoNO = "Aceptar su muerte en paz,\nrecordando lo aprendido";
   }
 
-  // Botón izquierdo
   fill(255);
   rect(90, height - 100, 200, 70, 10); 
   fill(0);
   text(textoSI, 105, height - 68, 180); 
 
-  // Botón derecho
   fill(255);
   rect(350, height - 100, 200, 70, 10);
   fill(0);
@@ -139,23 +131,19 @@ function dibujobotonEMP() {
   text(botonEMP, width/2, height - 45);
 }
 
-// 🔹 Función de avance de pantallas
 function avanzarPantalla() {
-  // si hay una siguiente pantalla
   if (transiciones[pantalla]) {
     pantalla = transiciones[pantalla];
   }
 }
 
 function mousePressed() {
-  // Pantalla inicial
   if (pantalla === 0 && colisionBoton(width/2 - 50, height - 80, 100, 50)) {
     sonido.play();
     pantalla = 1;
     return;
   }
 
-  // Pantallas de elección 
   if (pantalla === 4 || pantalla === 8 || pantalla === 12) {
     if (colisionBoton(90, height - 100, 200, 70)) {
       if (pantalla === 4) pantalla = 5;
@@ -169,14 +157,12 @@ function mousePressed() {
     return;
   }
 
-  // Pantalla final (reinicio)
   if (pantalla === 20 && colisionBoton(width/2 - 50, height - 80, 100, 50)) {
     pantalla = 0;
     sonido.stop();
     return;
   }
 
-  // Avanzar pantallas normales
   if (colisionBoton(width/2 - 50, height - 80, 100, 50)) {
     avanzarPantalla();
   }
